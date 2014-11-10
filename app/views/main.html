@@ -1,0 +1,35 @@
+<div ng-show="!language" class="input row">
+  <p>What's your username on <em>Github</em>?</p>
+  <form name="userForm" ng-submit="submitForm()">
+    <input type="text" name="username" ng-model="usernameInput" required>
+    <span class="error" ng-show="!userForm.username.$valid">(Required)</span>
+
+    <div class="submit-footer">
+      <input type="submit">
+      <span class="error" ng-show="error">{{ error }}</span>
+    </div>
+  </form>
+</div>
+
+<div ng-show="language" class="output row">
+  <p>Hey <strong>{{ username }}</strong>.</p>
+  <p>We think your favourite programming language is <strong>{{ language }}</strong>. Were we right?</p>
+</div>
+
+<div class="twitteresque-row">
+  <div class="inner">
+    <div class="avatar">
+      <img src="/images/horse_js.png">
+    </div>
+    <div class="content">
+      <div class="twitter-header">
+        <span class="username">horse_js</span>
+        <span class="time-ago">7 days</span>
+      </div>
+      <div class="body">
+        as much as I want to be, I'm not <a href="http://twitter.com/horse_js">@horse_js</a>
+      </div>
+    </div>
+    <div style="clear: both"></div>
+  </div>
+</div>
